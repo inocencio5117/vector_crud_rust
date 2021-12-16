@@ -47,10 +47,8 @@ fn change_value(vector: &mut Vec<String>) {
     
     println!("Insert the value:");
 
-    io::stdin()
-       .read_line(&mut value)
-       .expect("Error reading the value");
-
+    read_input(&mut value);
+    
     let position: usize = match position.trim().parse() {
         Ok(num) => num,
         Err(_) => return 
